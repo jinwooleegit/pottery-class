@@ -1,0 +1,35 @@
+[이미지 프롬프트 리스트]
+
+1. village.jpg
+- 크기: 600x400px
+- 프롬프트: "A narrow, artistic alley in Greenwich Village, New York in the early 1900s. Brick buildings with fire escapes, moody autumn atmosphere, vintage look, oil painting style, muted colors, realistic"
+
+2. ivy.jpg
+- 크기: 600x400px
+- 프롬프트: "Close-up of ivy leaves on an old brick wall, some leaves turning yellow and brown, autumn mood, dramatic lighting, realistic detail, painterly style"
+
+3. leaf.png
+- 크기: 20x20px
+- 형식: PNG with transparency
+- 프롬프트: "Single ivy leaf in autumn colors, transparent background, hand-drawn illustration style, simple but elegant"
+
+4. rain.png
+- 크기: 100x100px
+- 형식: PNG with transparency
+- 프롬프트: "Rain texture pattern, white diagonal lines on transparent background, minimalist design for overlay effect"
+
+[선택적 추가 이미지]
+
+5. painting.jpg
+- 크기: 400x600px
+- 프롬프트: "Hyper-realistic painting of a single green ivy leaf against a brick wall, morning light, extremely detailed, oil painting style, showing masterful technique"
+
+6. room.jpg
+- 크기: 600x400px
+- 프롬프트: "Interior of a modest artist's apartment in 1900s Greenwich Village, view from a bed towards a window, moody lighting, vintage atmosphere"
+
+[이미지 생성 시 주의사항]
+- 시대 설정: 1900년대 초
+- 계절감: 늦가을
+- 분위기: 감성적, 예술적
+- 테마: 희망, 예술, 희생
