@@ -1,0 +1,311 @@
+/* 태블릿 뷰 */
+@media screen and (max-width: 1024px) {
+    .speech-header, 
+    .speaker-profile,
+    .tab-navigation,
+    .related-speeches,
+    .speech-navigation {
+        padding: 1.5rem;
+    }
+
+    .speech-header h1 {
+        font-size: 2rem;
+    }
+
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .speech-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* 모바일 뷰 */
+@media screen and (max-width: 768px) {
+    .speech-header {
+        padding: 2rem 1rem;
+    }
+
+    .speech-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .speech-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .tab-navigation label {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content {
+        padding: 1.5rem;
+    }
+
+    .translation, .original {
+        padding: 1.5rem;
+    }
+
+    .related-speeches ul {
+        grid-template-columns: 1fr;
+    }
+
+    .speech-navigation {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .speech-navigation a {
+        display: block;
+    }
+}
+
+/* 작은 모바일 화면 */
+@media screen and (max-width: 480px) {
+    .speech-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tab-navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tab-navigation label {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+        border-radius: 4px;
+    }
+
+    .tab-content {
+        border-radius: 4px;
+    }
+}
+
+/* 반응형 스타일시트 */
+
+/* 모바일 기본 스타일 (최대 767px) */
+@media screen and (max-width: 767px) {
+    /* 기본 타이포그래피 조정 */
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        padding: 0 1rem;
+    }
+
+    /* 헤더 및 내비게이션 */
+    header {
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.5rem;
+        text-align: center;
+        background: var(--color-background);
+        border-radius: 4px;
+    }
+
+    /* 타임라인 단순화 */
+    .timeline {
+        padding: 1rem 0;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+
+    .timeline-date {
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 0.5rem;
+    }
+
+    .timeline-content {
+        padding-left: 1rem;
+    }
+
+    /* 연설 페이지 조정 */
+    .speech-header {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .tab-navigation label {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content {
+        padding: 1rem;
+    }
+
+    .speech-section {
+        display: block;
+    }
+
+    .translation, .original {
+        margin-bottom: 2rem;
+    }
+
+    /* 프로필 섹션 */
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* 관련 연설 */
+    .related-speeches ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* 이전/다음 내비게이션 */
+    .speech-navigation {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+/* 태블릿 스타일 (768px-1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 기본 레이아웃 */
+    body {
+        padding: 0 2rem;
+    }
+
+    /* 타임라인 조정 */
+    .timeline-item {
+        grid-template-columns: 80px 1fr;
+    }
+
+    /* 연설 페이지 */
+    .speech-section {
+        gap: 1.5rem;
+    }
+
+    /* 프로필 섹션 */
+    .profile-content {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    /* 관련 연설 */
+    .related-speeches ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 데스크톱 스타일 (1024px 이상) */
+@media screen and (min-width: 1024px) {
+    /* 기본 레이아웃 유지 */
+    body {
+        padding: 0;
+    }
+
+    /* 타임라인 강화 */
+    .timeline-item {
+        grid-template-columns: 120px 1fr;
+    }
+
+    /* 연설 페이지 최적화 */
+    .speech-section {
+        gap: 2rem;
+    }
+
+    /* 관련 연설 */
+    .related-speeches ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 다크 모드 토글 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #f8f8f8;
+        --color-background: #1a1a1a;
+        --color-muted: #999999;
+        --color-border: #333333;
+    }
+
+    body {
+        background-color: var(--color-background);
+    }
+
+    .speech-item,
+    .tab-content,
+    .profile-content,
+    .category-overview {
+        background-color: #242424;
+    }
+
+    .tag {
+        background-color: #333333;
+    }
+
+    blockquote {
+        background-color: #242424;
+    }
+}
+
+/* 애니메이션 최소화 설정 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 인쇄 최적화 */
+@media print {
+    /* 불필요한 요소 숨기기 */
+    nav,
+    .tab-navigation,
+    .speech-navigation,
+    footer {
+        display: none;
+    }
+
+    /* 페이지 나눔 최적화 */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    /* 링크 URL 표시 */
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* 여백 조정 */
+    @page {
+        margin: 2cm;
+    }
+
+    /* 배경색 제거 */
+    body {
+        background: none;
+        color: black;
+    }
+
+    /* 텍스트 최적화 */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+} 

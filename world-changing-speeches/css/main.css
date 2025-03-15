@@ -119,4 +119,500 @@
 
 .card {
     animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* 폰트 임포트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+/* 기본 변수 설정 */
+:root {
+    /* 색상 */
+    --color-text: #333333;
+    --color-background: #f8f8f8;
+    --color-primary: #4a6da7;
+    --color-secondary: #a74a4a;
+    --color-accent: #4aa77c;
+    --color-muted: #666666;
+    --color-border: #dddddd;
+    
+    /* 카테고리 색상 */
+    --color-ancient: #8b4513;
+    --color-early-20th: #4a6da7;
+    --color-mid-20th: #4aa77c;
+    --color-late-20th: #a74a4a;
+    --color-asia: #8b4513;
+
+    /* 타이포그래피 */
+    --font-serif: 'Noto Serif KR', serif;
+    --font-sans: 'Noto Sans KR', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+}
+
+/* 리셋 및 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 타이포그래피 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+
+p { margin-bottom: 1rem; }
+
+/* 헤더 및 내비게이션 */
+header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+nav a.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* 타임라인 스타일 */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.speech-item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.speech-item:hover {
+    transform: translateY(-5px);
+}
+
+.speech-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.speaker {
+    color: var(--color-muted);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* 태그 스타일 */
+.themes {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: var(--color-background);
+    color: var(--color-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    font-family: var(--font-sans);
+}
+
+/* 연설 페이지 스타일 */
+.speech-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tab-navigation {
+    margin: 2rem 0;
+}
+
+.tab-navigation input[type="radio"] {
+    display: none;
+}
+
+.tab-navigation label {
+    display: inline-block;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: var(--color-background);
+    border-radius: 4px 4px 0 0;
+}
+
+.tab-navigation input[type="radio"]:checked + label {
+    background: var(--color-primary);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 2rem;
+    background: white;
+    border-radius: 0 4px 4px 4px;
+}
+
+#tab1:checked ~ #background,
+#tab2:checked ~ #speech,
+#tab3:checked ~ #impact {
+    display: block;
+}
+
+/* 인용문 스타일 */
+blockquote {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-left: 4px solid var(--color-primary);
+    background: var(--color-background);
+    font-style: italic;
+}
+
+/* 푸터 */
+footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+}
+
+/* 유틸리티 클래스 */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+/* 링크 스타일 */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* 목록 스타일 */
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 이미지 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+/* 헤더 스타일 */
+.category-header {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-description {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* 메인 내비게이션 */
+.main-navigation {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.main-navigation a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 타임라인 스타일 */
+.timeline {
+    margin: 3rem 0;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-date {
+    font-family: var(--font-family-sans);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.timeline-content {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--primary-color);
+}
+
+/* 인용구 스타일 */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 2rem;
+    border-left: 4px solid var(--primary-color);
+    background-color: rgba(74, 109, 167, 0.1);
+    font-style: italic;
+}
+
+/* 테마 태그 스타일 */
+.theme-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem;
+    border-radius: 20px;
+    background-color: #e9ecef;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.theme-tag.major {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 카테고리 개요 섹션 */
+.category-overview {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 3rem 0;
+}
+
+.era-significance ul {
+    list-style-position: inside;
+    margin: 1rem 0;
+}
+
+/* 테마 클라우드 */
+.theme-cloud {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* 카테고리 내비게이션 */
+.category-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.category-navigation a {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.category-navigation a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 컨테이너 */
+.speech-header, 
+.speaker-profile,
+.tab-navigation,
+.related-speeches,
+.speech-navigation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 연설자 프로필 */
+.speaker-profile {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: -2rem;
+    position: relative;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.key-achievements {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.key-achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.key-achievements li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.key-achievements li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* 관련 연설 */
+.related-speeches {
+    margin-top: 3rem;
+}
+
+.related-speeches ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.related-speeches a {
+    display: block;
+    padding: 1rem;
+    background: white;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s;
+}
+
+.related-speeches a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 이전/다음 내비게이션 */
+.speech-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.speech-navigation a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.speech-navigation a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 강조 텍스트 */
+strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* 참고문헌 */
+.references {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.references ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.references li {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 연설자 프로필 제목 */
+.speaker-profile h3 {
+    font-family: var(--header-font);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.02em;
 } 

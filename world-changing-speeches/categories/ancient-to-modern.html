@@ -3,137 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고대~근대 명연설 - 세상을 바꾼 명연설 50선</title>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="/components/styles/tokens.css">
-    <link rel="stylesheet" href="/components/styles/components.css">
-    <link rel="stylesheet" href="/css/category.css">
+    <title>고대~근대의 명연설 | 세상을 바꾼 명연설 50선</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <nav class="nav">
-                <a href="/" class="nav-link">홈</a>
-                <a href="/categories/ancient-to-modern.html" class="nav-link active">고대~근대</a>
-                <a href="/categories/early-20th.html" class="nav-link">20세기 전반</a>
-                <a href="/categories/mid-20th.html" class="nav-link">20세기 중반</a>
-                <a href="/categories/late-20th.html" class="nav-link">20세기 후반~현대</a>
-                <a href="/categories/asia-others.html" class="nav-link">아시아 및 기타 지역</a>
-                <a href="/resources.html" class="nav-link">참고자료</a>
-            </nav>
-        </div>
+    <header class="category-header">
+        <h1>고대~근대의 명연설</h1>
+        <p class="category-description">기원전부터 19세기까지, 인류 문명의 발전 과정에서 울려 퍼진 불멸의 연설들</p>
     </header>
 
-    <main class="site-main">
-        <!-- Category Header -->
-        <header class="category-header">
-            <div class="container text-center">
-                <h1 class="category-title">고대~근대의 명연설</h1>
-                <p class="category-description">기원전부터 19세기까지, 인류 문명의 발전을 이끈 위대한 연설들을 소개합니다.</p>
-            </div>
-        </header>
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="../index.html">홈</a></li>
+            <li><a href="ancient-to-modern.html" class="active">고대~근대</a></li>
+            <li><a href="early-20th.html">20세기 전반</a></li>
+            <li><a href="mid-20th.html">20세기 중반</a></li>
+            <li><a href="late-20th.html">20세기 후반~현대</a></li>
+            <li><a href="asia-others.html">아시아 및 기타 지역</a></li>
+        </ul>
+    </nav>
 
-        <!-- Historical Context -->
-        <section class="historical-context">
-            <div class="container">
-                <h2 class="section-title">시대적 배경</h2>
-                <div class="historical-context__timeline">
-                    <div class="historical-context__event">
-                        <div class="historical-context__year">기원전 5세기</div>
-                        <div class="historical-context__description">
-                            민주주의의 발상지 아테네에서 연설과 수사학이 발달
-                        </div>
-                    </div>
-                    <div class="historical-context__event">
-                        <div class="historical-context__year">기원전 1세기</div>
-                        <div class="historical-context__description">
-                            로마 공화정의 전성기와 키케로의 활동
-                        </div>
-                    </div>
-                    <div class="historical-context__event">
-                        <div class="historical-context__year">15-16세기</div>
-                        <div class="historical-context__description">
-                            르네상스와 종교개혁의 시대
-                        </div>
-                    </div>
-                    <div class="historical-context__event">
-                        <div class="historical-context__year">18-19세기</div>
-                        <div class="historical-context__description">
-                            시민혁명과 근대 국가의 형성
-                        </div>
-                    </div>
+    <section class="timeline">
+        <h2>시대순 연설 목록</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-date">기원전 399년</div>
+            <div class="timeline-content">
+                <h3><a href="../speeches/socrates-apology.html">소크라테스의 변론</a></h3>
+                <p class="speaker">소크라테스</p>
+                <p class="description">아테네 법정에서 행한 소크라테스의 마지막 변론. 진리와 정의를 위해 죽음도 두려워하지 않았던 철학자의 불멸의 연설.</p>
+                <div class="key-quotes">
+                    <h4>주요 구절</h4>
+                    <blockquote>
+                        "나는 신이 나를 이 도시에 붙여 놓았다고 생각한다. 마치 크고 고귀한 말에게 파리가 필요하듯이..."
+                    </blockquote>
+                </div>
+                <div class="themes">
+                    <span class="theme-tag">진리 추구</span>
+                    <span class="theme-tag">정의</span>
+                    <span class="theme-tag">시민의 덕</span>
                 </div>
             </div>
-        </section>
-
-        <!-- Speech List -->
-        <section class="speech-list-section">
-            <div class="container">
-                <h2 class="section-title">주요 연설</h2>
-                <div class="speech-list">
-                    <article class="speech-card">
-                        <img src="/images/pericles.jpg" alt="페리클레스의 장례식 연설" class="speech-card__image">
-                        <div class="speech-card__content">
-                            <h3 class="speech-card__title">페리클레스의 장례식 연설</h3>
-                            <p class="speech-card__meta">기원전 431년 | 아테네</p>
-                            <div class="speech-card__tags">
-                                <span class="speech-card__tag">민주주의</span>
-                                <span class="speech-card__tag">시민정신</span>
-                            </div>
-                            <p class="speech-card__excerpt">
-                                아테네의 민주주의와 시민의 덕성을 칭송한 역사적인 연설
-                            </p>
-                            <a href="/speeches/pericles-funeral-oration.html" class="btn btn-primary">전체 연설 보기</a>
-                        </div>
-                    </article>
-
-                    <article class="speech-card">
-                        <img src="/images/cicero.jpg" alt="키케로의 카틸리나 탄핵 연설" class="speech-card__image">
-                        <div class="speech-card__content">
-                            <h3 class="speech-card__title">카틸리나 탄핵 연설</h3>
-                            <p class="speech-card__meta">기원전 63년 | 로마</p>
-                            <div class="speech-card__tags">
-                                <span class="speech-card__tag">정치</span>
-                                <span class="speech-card__tag">법치</span>
-                            </div>
-                            <p class="speech-card__excerpt">
-                                로마 공화정을 지키기 위한 키케로의 명연설
-                            </p>
-                            <a href="/speeches/cicero-against-catiline.html" class="btn btn-primary">전체 연설 보기</a>
-                        </div>
-                    </article>
-
-                    <article class="speech-card">
-                        <img src="/images/luther.jpg" alt="마틴 루터의 보름스 국회 연설" class="speech-card__image">
-                        <div class="speech-card__content">
-                            <h3 class="speech-card__title">보름스 국회 연설</h3>
-                            <p class="speech-card__meta">1521년 | 보름스</p>
-                            <div class="speech-card__tags">
-                                <span class="speech-card__tag">종교</span>
-                                <span class="speech-card__tag">개혁</span>
-                            </div>
-                            <p class="speech-card__excerpt">
-                                "나는 여기 서 있습니다. 달리 어찌할 수 없습니다."
-                            </p>
-                            <a href="/speeches/luther-diet-of-worms.html" class="btn btn-primary">전체 연설 보기</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p class="text-center">&copy; 2025 이진우</p>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script defer src="/components/scripts/main.js"></script>
+        <div class="timeline-item">
+            <div class="timeline-date">기원전 63년</div>
+            <div class="timeline-content">
+                <h3><a href="../speeches/cicero-against-catiline.html">카틸리나 탄핵 연설</a></h3>
+                <p class="speaker">키케로</p>
+                <p class="description">로마 공화정을 위협하는 카틸리나의 음모를 폭로한 키케로의 연설. 웅변술과 정치적 통찰력이 빛나는 고전적 명연설.</p>
+                <div class="key-quotes">
+                    <h4>주요 구절</h4>
+                    <blockquote>
+                        "언제까지 네가 우리의 인내를 시험하려 하느냐, 카틸리나여..."
+                    </blockquote>
+                </div>
+                <div class="themes">
+                    <span class="theme-tag">정치</span>
+                    <span class="theme-tag">정의</span>
+                    <span class="theme-tag">애국심</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-overview">
+        <h2>시대적 의의</h2>
+        <div class="era-significance">
+            <h3>고대 그리스-로마 시대의 연설</h3>
+            <p>고대 그리스-로마 시대의 연설들은 민주주의와 공화정의 기초를 마련했습니다. 소크라테스의 변론은 진리 추구와 정의의 가치를, 키케로의 연설은 정치적 웅변과 시민의 덕성을 대표합니다.</p>
+            
+            <h3>현대적 의의</h3>
+            <p>이 시기의 연설들은 오늘날에도 여전히 유효한 보편적 가치들을 담고 있습니다:</p>
+            <ul>
+                <li>진리와 정의의 추구</li>
+                <li>시민의 권리와 의무</li>
+                <li>민주주의의 기본 원칙</li>
+                <li>정치적 웅변의 모범</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="speech-themes">
+        <h2>주요 테마</h2>
+        <div class="theme-cloud">
+            <span class="theme-tag major">진리와 정의</span>
+            <span class="theme-tag">민주주의</span>
+            <span class="theme-tag">시민의식</span>
+            <span class="theme-tag major">정치적 웅변</span>
+            <span class="theme-tag">철학</span>
+            <span class="theme-tag">공화정</span>
+            <span class="theme-tag">도덕성</span>
+        </div>
+    </section>
+
+    <nav class="category-navigation">
+        <a href="../index.html" class="prev">← 메인 페이지</a>
+        <a href="early-20th.html" class="next">20세기 전반의 연설들 →</a>
+    </nav>
+
+    <footer>
+        <p>© 2025 세상을 바꾼 명연설 50선</p>
+    </footer>
 </body>
 </html> 

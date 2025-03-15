@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{TITLE} - {SPEAKER} | 세상을 바꾼 명연설 50선</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+</head>
+<body>
+    <header class="speech-header">
+        <h1>{TITLE} ({KOREAN_TITLE})</h1>
+        <h2>{SPEAKER} ({DATE})</h2>
+        <p class="source">출처: {SOURCE}</p>
+    </header>
+
+    <section class="speaker-profile">
+        <h3>연설자 소개</h3>
+        <div class="profile-content">
+            <div class="profile-text">
+                <p>{SPEAKER_BIO_1}</p>
+                <p>{SPEAKER_BIO_2}</p>
+                <p>{SPEAKER_BIO_3}</p>
+            </div>
+            <div class="key-achievements">
+                <h4>주요 업적</h4>
+                <ul>
+                    <li>{ACHIEVEMENT_1}</li>
+                    <li>{ACHIEVEMENT_2}</li>
+                    <li>{ACHIEVEMENT_3}</li>
+                    <li>{ACHIEVEMENT_4}</li>
+                    <li>{ACHIEVEMENT_5}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <nav class="tab-navigation">
+        <input type="radio" name="tabs" id="tab1" checked>
+        <label for="tab1">역사적 배경</label>
+        <input type="radio" name="tabs" id="tab2">
+        <label for="tab2">연설문</label>
+        <input type="radio" name="tabs" id="tab3">
+        <label for="tab3">영향과 의의</label>
+
+        <div class="tab-content" id="background">
+            <h3>역사적 배경</h3>
+            <p>{HISTORICAL_CONTEXT_1}</p>
+            <p>{HISTORICAL_CONTEXT_2}</p>
+            <p>{HISTORICAL_CONTEXT_3}</p>
+        </div>
+
+        <div class="tab-content" id="speech">
+            <h3>연설문</h3>
+            <div class="speech-section">
+                <div class="translation">
+                    <h4>한국어 번역</h4>
+                    {KOREAN_TRANSLATION}
+                </div>
+                <div class="original">
+                    <h4>{ORIGINAL_LANGUAGE_NAME}</h4>
+                    {ORIGINAL_TEXT}
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="impact">
+            <h3>영향과 의의</h3>
+            <p>{IMPACT_INTRO}</p>
+
+            <p>현대 사회에 미친 영향:</p>
+            <ul>
+                <li>{IMPACT_1}</li>
+                <li>{IMPACT_2}</li>
+                <li>{IMPACT_3}</li>
+                <li>{IMPACT_4}</li>
+            </ul>
+
+            <div class="references">
+                <h4>참고문헌</h4>
+                <ul>
+                    <li>{REFERENCE_1}</li>
+                    <li>{REFERENCE_2}</li>
+                    <li>{REFERENCE_3}</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="related-speeches">
+        <h3>관련 연설</h3>
+        <ul>
+            <li><a href="{RELATED_SPEECH_1_URL}">{RELATED_SPEECH_1_TITLE} ({RELATED_SPEECH_1_YEAR})</a></li>
+            <li><a href="{RELATED_SPEECH_2_URL}">{RELATED_SPEECH_2_TITLE} ({RELATED_SPEECH_2_YEAR})</a></li>
+            <li><a href="{RELATED_SPEECH_3_URL}">{RELATED_SPEECH_3_TITLE} ({RELATED_SPEECH_3_YEAR})</a></li>
+        </ul>
+    </section>
+
+    <nav class="speech-navigation">
+        <a href="{PREV_SPEECH_URL}" class="prev">← {PREV_SPEECH_TITLE}</a>
+        <a href="{NEXT_SPEECH_URL}" class="next">{NEXT_SPEECH_TITLE} →</a>
+    </nav>
+
+    <footer>
+        <p>© 2025 세상을 바꾼 명연설 50선</p>
+    </footer>
+</body>
+</html> 
