@@ -1,0 +1,122 @@
+/* Hero Section */
+.hero {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--font-primary);
+    font-size: calc(var(--font-size-2xl) * 1.5);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-heading);
+}
+
+.hero-subtitle {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    opacity: 0.9;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Timeline Overview Customization */
+.timeline-overview .timeline-item {
+    margin: var(--spacing-lg) 0;
+}
+
+.timeline-overview .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.timeline-overview h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-primary);
+}
+
+.timeline-overview p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+/* Featured Speeches */
+.featured-speeches {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-background);
+}
+
+.speech-meta {
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+}
+
+/* Site Header Enhancement */
+.site-header {
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-sticky);
+}
+
+/* Site Footer Enhancement */
+.site-footer {
+    background-color: var(--color-text);
+    color: white;
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: var(--spacing-xl);
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out forwards;
+} 

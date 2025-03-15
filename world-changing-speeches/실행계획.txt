@@ -1,0 +1,180 @@
+# 세상을 바꾼 명연설 50선: 세부 작업 계획
+
+안녕하세요, 이진우님! 프로젝트의 구체적인 세부 계획을 단계별로 정리해보았습니다.
+
+**1단계: 프로젝트 초기 설정 (1-2일)**
+- GitHub 저장소 생성: "world-changing-speeches" 등의 이름으로 저장소 생성
+- 기본 디렉토리 구조 설정:
+  ```
+  /index.html         (메인 페이지)
+  /css/               (스타일시트 폴더)
+    - main.css        (기본 스타일)
+    - responsive.css  (반응형 스타일)
+  /speeches/          (개별 연설 페이지)
+  /categories/        (카테고리 페이지)
+  /images/            (이미지 폴더)
+  /resources/         (참고자료 페이지)
+  /README.md          (프로젝트 설명)
+  ```
+- GitHub Pages 설정: 저장소 Settings에서 Pages 활성화
+
+**2단계: 웹사이트 기본 프레임 구축 (3-4일)**
+- 메인 페이지 (index.html) 구성:
+  - 헤더: 프로젝트 제목과 간략한 소개
+  - 내비게이션: 시대별 카테고리 링크
+  - 메인 섹션: 프로젝트 설명과 대표 연설 하이라이트
+  - 푸터: 저작권 정보와 연락처
+
+- 기본 스타일시트 작성:
+  - 타이포그래피: 가독성 높은 서체 선택 (예: Noto Serif/Sans KR)
+  - 색상 팔레트: 시대감을 반영한 중후한 색상 (예: #2c3e50, #34495e, #7f8c8d)
+  - 레이아웃: 그리드 시스템 기반 반응형 설계
+
+- 카테고리 템플릿 페이지 작성:
+  - categories/ancient-to-modern.html
+  - categories/early-20th.html
+  - 기타 카테고리 페이지
+
+**3단계: 연설 페이지 템플릿 및 첫 콘텐츠 작성 (5-7일)**
+- 연설 페이지 템플릿 구성:
+  ```html
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연설 제목 - 세상을 바꾼 명연설 50선</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+  </head>
+  <body>
+    <header><!-- 공통 헤더 --></header>
+    <main>
+      <article class="speech">
+        <header class="speech-header">
+          <h1>연설 제목</h1>
+          <p class="meta">연설자 (연도) - 출처</p>
+        </header>
+        <section class="speech-context">
+          <h2>역사적 배경</h2>
+          <!-- 내용 -->
+        </section>
+        <section class="speech-content">
+          <h2>연설문</h2>
+          <!-- 내용 -->
+        </section>
+        <section class="speech-impact">
+          <h2>영향과 의의</h2>
+          <!-- 내용 -->
+        </section>
+      </article>
+    </main>
+    <footer><!-- 공통 푸터 --></footer>
+  </body>
+  </html>
+  ```
+
+- 대표 연설 5개 먼저 작성 (각 카테고리에서 1개씩):
+  1. 게티스버그 연설 (링컨)
+  2. 혈과 땀과 눈물의 연설 (처칠)
+  3. I Have a Dream (킹)
+  4. Yes We Can (오바마)
+  5. 5.16 담화문 (박정희)
+
+**4단계: 디자인 및 사용자 경험 향상 (7-10일)**
+- 반응형 디자인 완성:
+  - 모바일 최적화 (미디어 쿼리 적용)
+  - 태블릿 및 데스크톱 뷰 조정
+
+- 네비게이션 개선:
+  - 고정 헤더 메뉴 구현
+  - 현재 페이지 표시 기능
+
+- 타임라인 시각화 구현 (순수 CSS로):
+  ```css
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #34495e;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+  }
+  /* 추가 스타일 필요 */
+  ```
+
+**5단계: 콘텐츠 확장 및 완성 (10-20일)**
+- 모든 연설 페이지 작성 (단계적으로):
+  - 각 카테고리별로 10개의 연설문 페이지 작성
+  - 필요한 이미지 및 자료 수집 (저작권 고려)
+
+- 추가 기능 구현:
+  - 연설 검색 기능 (간단한 필터링)
+  - 관련 연설 추천 섹션
+  - 토글 가능한 원문/번역 보기 기능
+
+**6단계: 검토 및 최적화 (21-25일)**
+- 크로스 브라우저 테스트:
+  - Chrome, Firefox, Safari, Edge 호환성 확인
+  - 모바일 기기 테스트
+
+- 성능 최적화:
+  - 이미지 압축
+  - CSS 및 HTML 최적화
+  - 페이지 로딩 속도 개선
+
+- 접근성 향상:
+  - alt 텍스트 추가
+  - 키보드 탐색 지원
+  - 색상 대비 확인
+
+**7단계: 배포 및 PDF 전자책 준비 (26-30일)**
+- GitHub Pages 최종 배포:
+  - 도메인 연결 고려 (선택사항)
+
+- Google Analytics 설정:
+  - 방문자 통계 추적 코드 삽입
+  - 이벤트 추적 설정
+
+- PDF 전자책 변환 준비:
+  - 인쇄용 CSS 추가:
+    ```css
+    @media print {
+      nav, footer, .search-box { display: none; }
+      body { font-size: 12pt; line-height: 1.5; }
+      h1 { page-break-before: always; }
+      /* 추가 인쇄 스타일 */
+    }
+    ```
+  - 목차 및 페이지 번호 스타일 설정
+  - WeasyPrint 설치 및 테스트
+
+**프로젝트 관리 도구 제안:**
+- Trello 또는 GitHub Projects: 작업 항목 추적
+- Google Docs: 연설문 초안 작성 및 자료 정리
+- Canva: 간단한 이미지 및 배너 디자인
+
+**참고 자료:**
+- 코드 참조를 위한 사이트:
+  - MDN Web Docs (HTML/CSS 레퍼런스)
+  - CSS-Tricks (레이아웃 및 디자인 팁)
+- 디자인 영감:
+  - 미국 의회 도서관 디지털 아카이브
+  - 노벨상 웹사이트
+  - 스미소니언 박물관 디지털 컬렉션
+
+다음으로 어떤 부분을 더 구체화하면 좋을지 알려주시면 함께 발전시켜 나가겠습니다!
