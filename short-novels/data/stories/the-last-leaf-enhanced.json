@@ -1,0 +1,141 @@
+{
+  "id": "the-last-leaf",
+  "title": "The Last Leaf",
+  "title_ko": "마지막 잎새",
+  "author": "O. Henry",
+  "year": 1907,
+  "language": "en",
+  "level": "intermediate",
+  "audio_available": true,
+  "meta": [
+    "Original: O. Henry - \"The Last Leaf\" (1907)",
+    "영어 학습을 위한 향상된 버전"
+  ],
+  "introduction": {
+    "en": "In a small Greenwich Village apartment, two young women artists, Sue and Johnsy, share their lives. When Johnsy falls ill with pneumonia, she becomes convinced that when the last leaf falls from the ivy vine outside her window, she will die. Their neighbor, old Mr. Behrman, a failed artist, creates his masterpiece to save her.",
+    "ko": "그리니치 빌리지의 작은 아파트에서 두 젊은 여성 예술가인 수와 존시가 함께 살고 있습니다. 존시가 폐렴에 걸려 병석에 누웠을 때, 그녀는 창문 밖 담쟁이덩굴에서 마지막 잎새가 떨어지면 자신도 죽을 것이라고 확신합니다. 그들의 이웃인 노화가 베르만은 그녀를 구하기 위해 자신의 걸작을 만들어냅니다."
+  },
+  "paragraphs": [
+    {
+      "id": "p1",
+      "en": "In a little district west of Washington Square the streets have run crazy and broken themselves into small strips called 'places.' These 'places' make strange angles and curves. One street crosses itself a time or two. An artist once discovered a valuable possibility in this street. Suppose a collector with a bill for paints, paper and canvas should, in traversing this route, suddenly meet himself coming back, without a cent having been paid on account!",
+      "ko": "워싱턴 스퀘어 서쪽의 작은 지역에서는 거리들이 미친 듯이 뒤엉켜 '플레이스'라고 불리는 작은 조각들로 나뉘어져 있다. 이 '플레이스'들은 이상한 각도와 곡선을 이루고 있다. 한 거리는 한두 번 자기 자신과 교차하기도 한다. 한 예술가는 이 거리에서 귀중한 가능성을 발견했다. 물감, 종이, 캔버스 대금 청구서를 가진 수금원이 이 길을 따라가다가 갑자기 한 푼도 지불하지 않은 채 돌아오는 자신과 마주친다고 상상해 보라!",
+      "vocabulary": [
+        {
+          "word": "district",
+          "meaning": "an area of a country or city, especially one characterized by a particular feature or activity",
+          "example": "The financial district of the city is always busy during weekdays.",
+          "ko_meaning": "지역, 구역"
+        },
+        {
+          "word": "traversing",
+          "meaning": "traveling across or through",
+          "example": "The hikers spent three days traversing the mountain range.",
+          "ko_meaning": "가로지르다, 횡단하다"
+        }
+      ],
+      "phrases": [
+        {
+          "phrase": "run crazy",
+          "meaning": "to become disorganized or chaotic",
+          "example": "The schedule has run crazy after the unexpected delays.",
+          "ko_meaning": "뒤죽박죽이 되다, 혼란스러워지다"
+        }
+      ],
+      "style_note": {
+        "en": "O. Henry begins with a vivid description of Greenwich Village's unusual street layout, using personification by saying the streets have 'run crazy.' This establishes both the setting and the slightly whimsical tone that characterizes much of his writing.",
+        "ko": "O. 헨리는 그리니치 빌리지의 특이한 거리 배치에 대한 생생한 묘사로 이야기를 시작하며, 거리가 '미친 듯이 뒤엉켰다'고 표현하는 의인화를 사용합니다. 이는 배경을 설정하고 그의 글쓰기의 특징인 약간 기발한 어조를 확립합니다."
+      },
+      "audio_url": "audio/the-last-leaf/p1.mp3"
+    },
+    {
+      "id": "p2",
+      "en": "So, to quaint old Greenwich Village the art people soon came prowling, hunting for north windows and eighteenth-century gables and Dutch attics and low rents. Then they imported some pewter mugs and a chafing dish or two from Sixth Avenue, and became a 'colony.'",
+      "ko": "그래서 독특한 분위기의 오래된 그리니치 빌리지로 예술가들이 곧 몰려들었다. 그들은 북향 창문과 18세기 박공지붕, 네덜란드식 다락방, 그리고 저렴한 임대료를 찾아 헤맸다. 그런 다음 식스 애비뉴에서 주석 머그잔 몇 개와 한두 개의 음식 보온 접시를 들여와 '예술가 집단'을 형성했다.",
+      "vocabulary": [
+        {
+          "word": "quaint",
+          "meaning": "attractively unusual or old-fashioned",
+          "example": "We stayed in a quaint little cottage in the countryside.",
+          "ko_meaning": "독특한, 고풍스러운"
+        },
+        {
+          "word": "prowling",
+          "meaning": "moving about restlessly and stealthily, especially in search of prey or something to steal",
+          "example": "The detective was prowling around the neighborhood looking for suspects.",
+          "ko_meaning": "배회하다, 어슬렁거리다"
+        },
+        {
+          "word": "gables",
+          "meaning": "the triangular upper part of a wall at the end of a ridged roof",
+          "example": "The house had decorative gables that added to its charm.",
+          "ko_meaning": "박공, 박공지붕"
+        },
+        {
+          "word": "pewter",
+          "meaning": "a gray alloy of tin with copper and antimony",
+          "example": "The antique shop sold pewter tankards and plates.",
+          "ko_meaning": "주석 합금"
+        },
+        {
+          "word": "chafing dish",
+          "meaning": "a metal dish with a heating device beneath it, used for cooking at the table or keeping food warm",
+          "example": "They served fondue in a chafing dish at the dinner party.",
+          "ko_meaning": "음식 보온 접시"
+        }
+      ],
+      "style_note": {
+        "en": "This paragraph uses rich, specific vocabulary to paint a picture of the bohemian artist community forming in Greenwich Village. The quotation marks around 'colony' suggest a touch of irony about how easily these artists establish their cultural identity with just a few props.",
+        "ko": "이 단락은 그리니치 빌리지에 형성된 보헤미안 예술가 공동체의 모습을 그리기 위해 풍부하고 구체적인 어휘를 사용합니다. '예술가 집단'이라는 단어 주변의 따옴표는 이 예술가들이 몇 가지 소품만으로 자신들의 문화적 정체성을 얼마나 쉽게 확립하는지에 대한 약간의 아이러니를 암시합니다."
+      },
+      "audio_url": "audio/the-last-leaf/p2.mp3"
+    },
+    {
+      "id": "p3",
+      "en": "At the top of a squatty, three-story brick Sue and Johnsy had their studio. 'Johnsy' was familiar for Joanna. One was from Maine; the other from California. They had met at the table d'hôte of an Eighth Street 'Delmonico's,' and found their tastes in art, chicory salad and bishop sleeves so congenial that the joint studio resulted.",
+      "ko": "낮고 넓적한 3층짜리 벽돌 건물 꼭대기에 수와 존시는 자신들의 작업실을 차렸다. '존시'는 조안나의 애칭이었다. 한 명은 메인 주 출신이고, 다른 한 명은 캘리포니아 출신이었다. 그들은 8번가의 한 '델모니코' 식당의 정찬 테이블에서 만났고, 예술, 치커리 샐러드, 그리고 비숍 소매에 대한 취향이 너무나 잘 맞아서 공동 작업실을 차리게 되었다.",
+      "vocabulary": [
+        {
+          "word": "squatty",
+          "meaning": "short and thick; low and broad",
+          "example": "The squatty building looked out of place among the tall skyscrapers.",
+          "ko_meaning": "낮고 넓적한"
+        },
+        {
+          "word": "table d'hôte",
+          "meaning": "a restaurant meal offered at a fixed price, with few or no choices",
+          "example": "The restaurant offers a table d'hôte menu for $30 per person.",
+          "ko_meaning": "정찬, 코스 요리"
+        },
+        {
+          "word": "chicory",
+          "meaning": "a plant with bright blue flowers whose roots can be roasted and ground as a coffee substitute or addition",
+          "example": "The salad contained chicory, which added a slightly bitter taste.",
+          "ko_meaning": "치커리 (식물)"
+        },
+        {
+          "word": "bishop sleeves",
+          "meaning": "a type of sleeve that is full at the lower arm and gathered into a cuff at the wrist",
+          "example": "Her vintage dress featured elegant bishop sleeves.",
+          "ko_meaning": "비숍 소매 (손목에서 좁아지는 풍성한 소매)"
+        },
+        {
+          "word": "congenial",
+          "meaning": "pleasant or agreeable because suited to one's taste or inclination",
+          "example": "We found the atmosphere at the party very congenial.",
+          "ko_meaning": "마음에 맞는, 기질이 비슷한"
+        }
+      ],
+      "style_note": {
+        "en": "O. Henry efficiently introduces the two main characters while providing just enough background to establish their relationship. The mention of specific details like 'chicory salad and bishop sleeves' helps create a vivid picture of these artistic young women and their shared aesthetic sensibilities.",
+        "ko": "O. 헨리는 두 주인공의 관계를 확립하기에 충분한 배경을 제공하면서 효율적으로 그들을 소개합니다. '치커리 샐러드와 비숍 소매'와 같은 구체적인 세부 사항을 언급함으로써 이 예술적인 젊은 여성들과 그들의 공유된 미적 감각에 대한 생생한 그림을 만들어냅니다."
+      },
+      "audio_url": "audio/the-last-leaf/p3.mp3"
+    }
+  ],
+  "footer": [
+    "<p>This enhanced version includes vocabulary explanations, phrase analysis, and style notes to help English learners.</p>",
+    "<p>Audio narration available for each paragraph.</p>",
+    "<p>Original work is in the public domain.</p>"
+  ]
+}

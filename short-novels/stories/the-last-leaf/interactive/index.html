@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Leaf - 영어 학습 소설</title>
+    
+    <!-- 폰트 및 아이콘 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="/styles/story.css">
+    <link rel="stylesheet" href="/styles/enhanced.css">
+</head>
+<body>
+    <div class="container enhanced-container">
+        <header class="story-header">
+            <div class="story-info">
+                <h1 id="story-title">The Last Leaf</h1>
+                <h2 id="story-author">O. Henry</h2>
+                <div class="story-meta">
+                    <span class="story-level-badge" id="story-level">INTERMEDIATE</span>
+                </div>
+            </div>
+            
+            <div class="controls-bar">
+                <div class="control-group">
+                    <button id="toggle-translation" class="control-btn active" title="한국어 번역 표시/숨기기">
+                        <i class="fas fa-language"></i> 번역
+                    </button>
+                    <button id="toggle-vocabulary" class="control-btn active" title="단어/숙어 설명 표시/숨기기">
+                        <i class="fas fa-book"></i> 단어
+                    </button>
+                    <button id="toggle-style-notes" class="control-btn active" title="문체 분석 표시/숨기기">
+                        <i class="fas fa-feather-alt"></i> 문체
+                    </button>
+                </div>
+                
+                <div class="control-group">
+                    <button id="decrease-font" class="control-btn" title="글자 크기 줄이기">
+                        <i class="fas fa-font"></i><i class="fas fa-minus"></i>
+                    </button>
+                    <button id="increase-font" class="control-btn" title="글자 크기 키우기">
+                        <i class="fas fa-font"></i><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <div class="story-introduction">
+            <div class="introduction-en"></div>
+            <div class="introduction-ko"></div>
+        </div>
+        
+        <main id="story-content" class="story-content">
+            <!-- 소설 내용은 JavaScript로 동적 생성됨 -->
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> 소설을 불러오는 중...
+            </div>
+        </main>
+        
+        <footer class="story-footer">
+            <div class="navigation">
+                <a href="/" class="nav-btn">
+                    <i class="fas fa-home"></i> 홈으로
+                </a>
+                <a href="/stories/the-last-leaf/en/original.html" class="nav-btn">
+                    <i class="fas fa-book-open"></i> 원문 보기
+                </a>
+            </div>
+            <div class="copyright">
+                <p>원작: O. Henry의 "The Last Leaf" (1907) - 공개 도메인</p>
+                <p>© 2023 영어 학습 소설 프로젝트 - 교육 목적으로만 사용 가능</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- 자바스크립트 -->
+    <script src="/js/enhanced-loader.js"></script>
+</body>
+</html> 

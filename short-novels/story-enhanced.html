@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 학습 소설</title>
+    <link rel="stylesheet" href="styles/story.css">
+    <link rel="stylesheet" href="styles/enhanced.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container enhanced-container">
+        <div class="story-header">
+            <h1 id="story-title"></h1>
+            <p id="story-author"></p>
+            <div class="level-indicator">
+                <span id="story-level" class="level-badge"></span>
+            </div>
+        </div>
+
+        <div class="controls-bar">
+            <div class="view-controls">
+                <button id="toggle-vocabulary" class="control-button active">
+                    <i class="fas fa-book"></i> 단어/숙어
+                </button>
+                <button id="toggle-style-notes" class="control-button active">
+                    <i class="fas fa-feather-alt"></i> 문체 분석
+                </button>
+                <button id="toggle-translation" class="control-button active">
+                    <i class="fas fa-language"></i> 한국어 번역
+                </button>
+            </div>
+            <div class="font-controls">
+                <button id="decrease-font" class="control-button">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span class="font-size-label">글자 크기</span>
+                <button id="increase-font" class="control-button">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="introduction-section">
+            <div class="introduction-en"></div>
+            <div class="introduction-ko"></div>
+        </div>
+
+        <div id="story-content" class="enhanced-content">
+            <!-- 소설 내용이 여기에 동적으로 로드됩니다 -->
+        </div>
+
+        <div class="navigation">
+            <a href="index.html">← 목록으로 돌아가기</a>
+        </div>
+    </div>
+    
+    <script src="js/enhanced-loader.js"></script>
+</body>
+</html> 
