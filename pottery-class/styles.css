@@ -1,60 +1,329 @@
+/* 기본 스타일 */
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #D2691E;
+    --background-color: #FFF8F0;
+    --text-color: #333333;
+    --light-text: #FFFFFF;
+    --card-background: #FFFFFF;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-color: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1, h2, h3 {
-    color: #333;
+/* 헤더 스타일 */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    margin-bottom: 40px;
+    border-radius: 8px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
+header h1 {
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-nav ul li a {
-    color: #2c3e50;
-    text-decoration: none;
-    padding: 5px 0;
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
 }
 
-nav ul li a:hover {
-    color: #3498db;
-}
-
-.intro {
-    margin: 20px 0;
+/* 섹션 스타일 */
+section {
+    margin-bottom: 40px;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
 }
 
-.content {
-    margin-top: 20px;
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
 }
 
-.back-link {
+/* 챕터 스타일 */
+.chapters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.chapter {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.chapter:hover {
+    transform: translateY(-5px);
+}
+
+.chapter h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.chapter p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.chapter ul {
+    list-style-position: inside;
+    margin-bottom: 20px;
+}
+
+.chapter ul li {
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.chapter-link {
     display: inline-block;
-    margin-top: 20px;
-    color: #666;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
     text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.back-link:hover {
-    color: #333;
+.chapter-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 학습 안내 스타일 */
+.course-info ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+.course-info li {
+    margin-bottom: 10px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .chapters {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* 챕터 페이지 스타일 */
+.chapter-intro {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.weekly-contents {
+    margin-top: 40px;
+}
+
+.week {
+    background-color: var(--card-background);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.week:hover {
+    transform: translateY(-3px);
+}
+
+.week h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.week p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.week-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.week-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 챕터 목록 링크 스타일 */
+.chapter ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.chapter ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* 주차별 페이지 스타일 */
+.week-header {
+    text-align: left;
+    padding: 30px;
+}
+
+.week-header h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.week-header h2 {
+    font-size: 1.5em;
+    color: var(--light-text);
+    border: none;
+    opacity: 0.9;
+}
+
+.lecture-plan .plan-content {
+    padding: 20px;
+}
+
+.plan-content h3 {
+    color: var(--primary-color);
+    margin: 20px 0 10px;
+    font-size: 1.3em;
+}
+
+.plan-content ul, .plan-content ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.plan-content li {
+    margin-bottom: 8px;
+}
+
+.plan-content ul ul, .plan-content ol ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.lecture-script .script-content {
+    padding: 20px;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+}
+
+.script-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.week-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.nav-link.prev::before {
+    content: "←";
+    margin-right: 8px;
+}
+
+.nav-link.next::after {
+    content: "→";
+    margin-left: 8px;
 } 
