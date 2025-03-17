@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지 제작 과정</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .step {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffeeba;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>도예 강의 홈페이지 제작 과정</h1>
+    
+    <div class="step">
+        <h2>1. 프로젝트 개요</h2>
+        <p>8주차 도예 강의 내용을 웹사이트로 구축하여 학생들과 효과적으로 소통하고 강의 자료를 공유하는 플랫폼 구축</p>
+        <ul>
+            <li>강의 계획서와 강의 스크립트 제공</li>
+            <li>학생들과의 소통을 위한 게시판 운영</li>
+            <li>강의 자료 및 실습 내용 공유</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>2. 기술 스택 선정</h2>
+        <ul>
+            <li>웹 호스팅: Cafe24</li>
+            <li>CMS: WordPress</li>
+            <li>추가 기능: WordPress 플러그인</li>
+        </ul>
+        <div class="note">
+            <strong>선정 이유:</strong>
+            <ul>
+                <li>안정적인 보안 관리</li>
+                <li>편리한 콘텐츠 관리</li>
+                <li>다양한 플러그인으로 기능 확장 가능</li>
+                <li>한국 호스팅 업체의 안정적인 서비스</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>3. 필수 플러그인</h2>
+        <h3>보안</h3>
+        <ul>
+            <li>Wordfence Security - 방화벽 및 악성코드 검사</li>
+            <li>Akismet Anti-Spam - 스팸 댓글 방지</li>
+            <li>Really Simple SSL - SSL 인증서 관리</li>
+        </ul>
+        <h3>강의 관리</h3>
+        <ul>
+            <li>LearnPress 또는 LifterLMS - 강의 콘텐츠 관리</li>
+            <li>PDF Embedder - PDF 문서 표시</li>
+            <li>TablePress - 표 관리</li>
+        </ul>
+        <h3>커뮤니티</h3>
+        <ul>
+            <li>bbPress - 게시판/포럼</li>
+            <li>Ultimate Member - 회원 관리</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>4. 사이트 구조</h2>
+        <pre>
+홈
+├── 강의 소개
+├── 강의 목록
+│   ├── 도자기 유약의 세계
+│   │   ├── 강의 소개
+│   │   ├── 주차별 강의
+│   │   │   ├── 1주차
+│   │   │   │   ├── 강의계획서
+│   │   │   │   ├── 강의자료
+│   │   │   │   └── 토론방
+│   │   │   ├── 2주차
+│   │   │   └── ...
+│   │   ├── 질문과 답변
+│   │   └── 자료실
+│   │
+│   ├── 도자 제작 기초
+│   │   ├── 강의 소개
+│   │   ├── 주차별 강의
+│   │   └── ...
+│   │
+│   └── [향후 추가 강의]
+│
+├── 공지사항
+├── 통합 게시판
+└── 회원 전용 공간
+        </pre>
+        <div class="note">
+            <strong>확장성 고려사항:</strong>
+            <ul>
+                <li>각 강의는 독립적인 구조를 가지되, 통합 관리 가능</li>
+                <li>강의별 개별 접근 권한 설정 가능</li>
+                <li>통합 게시판과 강의별 게시판 분리 운영</li>
+                <li>강의 자료의 체계적 아카이빙</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>5. 구현 단계</h2>
+        <ol>
+            <li>Cafe24 호스팅 계정 생성</li>
+            <li>도메인 설정</li>
+            <li>WordPress 설치</li>
+            <li>테마 선택 및 설치</li>
+            <li>필수 플러그인 설치</li>
+            <li>기본 페이지 구조 설정</li>
+            <li>강의 자료 업로드</li>
+            <li>회원 등급 및 권한 설정</li>
+            <li>보안 설정</li>
+            <li>테스트 및 최적화</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>6. 회원 등급 구조</h2>
+        <ul>
+            <li>관리자 (교수님) - 모든 권한</li>
+            <li>에디터 (조교) - 콘텐츠 관리 권한</li>
+            <li>수강생 - 강의 자료 접근 및 게시판 사용 권한</li>
+            <li>일반회원 - 제한된 접근 권한</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>7. 유지 보수 계획</h2>
+        <ul>
+            <li>정기적인 백업 설정</li>
+            <li>보안 업데이트 관리</li>
+            <li>콘텐츠 업데이트 일정 관리</li>
+            <li>사용자 피드백 수집 및 반영</li>
+        </ul>
+    </div>
+
+    <div class="note">
+        <h3>참고사항</h3>
+        <ul>
+            <li>모든 설정은 백업 후 진행</li>
+            <li>보안을 위해 관리자 페이지 접속 IP 제한 설정</li>
+            <li>주기적인 보안 점검 필요</li>
+            <li>사용자 피드백을 통한 지속적인 개선</li>
+        </ul>
+    </div>
+</body>
+</html> 
