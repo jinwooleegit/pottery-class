@@ -6,8 +6,28 @@
     <title>제2장: 정형 단계 - 도예 교육과정</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // 헤더와 푸터를 로드하는 함수
+        function includeHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    // HTML에서 body 태그 내용만 추출
+                    const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
+                    document.getElementById(elementId).innerHTML = bodyContent;
+                });
+        }
+
+        // 페이지 로드 시 헤더와 푸터 포함
+        window.onload = function() {
+            includeHTML('header.html', 'header-placeholder');
+            includeHTML('footer.html', 'footer-placeholder');
+        };
+    </script>
 </head>
 <body>
+    <div id="header-placeholder"></div>
+
     <div class="container">
         <header>
             <h1>제2장: 정형 단계</h1>
@@ -45,5 +65,7 @@
             <a href="chapter3.html" class="nav-link">다음 장: 장식 단계</a>
         </nav>
     </div>
+
+    <div id="footer-placeholder"></div>
 </body>
 </html> 
