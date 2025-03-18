@@ -1,12 +1,15 @@
 /* 기본 스타일 */
 :root {
-    --primary-color: #8B4513;
-    --secondary-color: #D2691E;
+    --primary: #9c7a62;
+    --secondary: #f3e9e3;
+    --accent: #d4a373;
+    --text-dark: #44403c;
+    --text-light: #f5f5f4;
+    --shadow: rgba(0, 0, 0, 0.08);
     --background-color: #FFF8F0;
     --text-color: #333333;
     --light-text: #FFFFFF;
     --card-background: #FFFFFF;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --border-color: #E0E0E0;
 }
 
@@ -21,49 +24,186 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    margin-top: 80px; /* 상단 고정 네비게이션 바를 위한 여백 */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
+}
+
+/* 전체 네비게이션 컨테이너 */
+.navbar {
+    background-color: var(--secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow);
+    padding: 0;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 70px;
+}
+
+/* 로고 스타일 */
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary) !important;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    margin-right: 2rem;
+    display: block;
+}
+
+/* 메인 메뉴 컨테이너 */
+.main-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.main-menu > li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* 메인 메뉴 링크 스타일 */
+.main-menu > li > a {
+    color: var(--text-dark) !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0 0.25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.main-menu > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.main-menu > li > a:hover {
+    color: var(--primary) !important;
+}
+
+.main-menu > li > a:hover::after {
+    width: 100%;
+}
+
+/* 모바일 메뉴 토글 버튼 */
+.mobile-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 992px) {
+    .nav-container {
+        height: 60px;
+        width: 100%;
+    }
+    
+    .mobile-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 12px var(--shadow);
+        padding: 1rem 0;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        width: 100%;
+    }
+
+    .main-menu.active {
+        max-height: 500px;
+    }
+
+    .main-menu > li {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-menu > li > a {
+        padding: 1rem 1.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-menu > li > a::after {
+        display: none;
+    }
+}
+
+/* 섹션 스타일 */
+section {
+    margin: 2rem 0;
 }
 
 /* 헤더 스타일 */
 header {
     text-align: center;
-    padding: 40px 0;
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    margin-bottom: 40px;
-    border-radius: 8px;
+    margin: 2rem 0;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+h1 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
-
-/* 섹션 스타일 */
-section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: var(--card-background);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-section h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-color);
+    color: var(--text-dark);
+    font-weight: 300;
 }
 
 /* 챕터 스타일 */
@@ -86,7 +226,7 @@ section h2 {
 }
 
 .chapter h3 {
-    color: var(--primary-color);
+    color: var(--primary);
     margin-bottom: 15px;
     font-size: 1.4em;
 }
@@ -109,7 +249,7 @@ section h2 {
 .chapter-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: var(--light-text);
     text-decoration: none;
     border-radius: 4px;
@@ -117,7 +257,7 @@ section h2 {
 }
 
 .chapter-link:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent);
 }
 
 /* 학습 안내 스타일 */
@@ -128,29 +268,6 @@ section h2 {
 
 .course-info li {
     margin-bottom: 10px;
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    header {
-        padding: 20px 0;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    .chapters {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 15px;
-    }
 }
 
 /* 챕터 페이지 스타일 */
@@ -182,7 +299,7 @@ section h2 {
 }
 
 .week h3 {
-    color: var(--primary-color);
+    color: var(--primary);
     margin-bottom: 15px;
     font-size: 1.3em;
 }
@@ -195,7 +312,7 @@ section h2 {
 .week-link {
     display: inline-block;
     padding: 8px 16px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: var(--light-text);
     text-decoration: none;
     border-radius: 4px;
@@ -203,7 +320,7 @@ section h2 {
 }
 
 .week-link:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent);
 }
 
 .chapter-navigation {
@@ -217,7 +334,7 @@ section h2 {
 .nav-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: var(--light-text);
     text-decoration: none;
     border-radius: 4px;
@@ -225,7 +342,7 @@ section h2 {
 }
 
 .nav-link:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent);
 }
 
 /* 챕터 목록 링크 스타일 */
@@ -236,7 +353,7 @@ section h2 {
 }
 
 .chapter ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary);
     text-decoration: underline;
 }
 
@@ -263,7 +380,7 @@ section h2 {
 }
 
 .plan-content h3 {
-    color: var(--primary-color);
+    color: var(--primary);
     margin: 20px 0 10px;
     font-size: 1.3em;
 }
@@ -306,15 +423,15 @@ section h2 {
 .nav-link {
     display: inline-block;
     padding: 10px 20px;
-    color: var(--primary-color);
+    color: var(--primary);
     text-decoration: none;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--primary);
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: var(--light-text);
 }
 

@@ -4,158 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도예 수업</title>
-    <style>
-        /* 전체 네비게이션 컨테이너 */
-        .navbar {
-            background-color: #8B4513;
-            padding: 0.8rem 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-        }
-
-        /* 메인 메뉴 컨테이너 */
-        .main-menu {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .main-menu > li {
-            position: relative;
-        }
-
-        /* 메인 메뉴 링크 스타일 */
-        .main-menu > li > a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.8rem 0;
-            font-weight: 500;
-            font-size: 1rem;
-            display: block;
-            transition: all 0.3s ease;
-        }
-
-        .main-menu > li > a:hover {
-            color: #FFE4C4;
-        }
-
-        /* 드롭다운 메뉴 스타일 */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            min-width: 180px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 4px;
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* 드롭다운 메뉴 항목 스타일 */
-        .dropdown-content a {
-            color: #666;
-            text-decoration: none;
-            padding: 0.6rem 1.2rem;
-            display: block;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f8f9fa;
-            color: #8B4513;
-        }
-
-        /* 로고 스타일 */
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #FFE4C4 !important;
-            text-decoration: none;
-            padding: 0.8rem 0;
-            margin-right: 2rem;
-        }
-
-        /* 반응형 디자인을 위한 미디어 쿼리 */
-        @media (max-width: 768px) {
-            .main-menu {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-                margin-top: 0;
-                padding-left: 1rem;
-                min-width: auto;
-                background-color: transparent;
-            }
-
-            .navbar {
-                padding: 1rem;
-            }
-
-            .logo {
-                margin-bottom: 1rem;
-            }
-
-            .main-menu > li > a {
-                padding: 0.5rem 0;
-            }
-
-            .dropdown-content a {
-                color: #FFE4C4;
-                padding: 0.4rem 1rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
-        <ul class="main-menu">
-            <li><a href="index.html" class="logo">도예 수업</a></li>
-            <li class="dropdown">
-                <a href="chapter2.html">도자기의 기초</a>
-                <div class="dropdown-content">
-                    <a href="chapter2/week2.html">굽 깎기와 다듬기</a>
-                    <a href="chapter2/week3.html">부속품 제작</a>
-                </div>
-            </li>
-            <li><a href="chapter3.html">물레 기초</a></li>
-            <li class="dropdown">
-                <a href="chapter4.html">물레 성형</a>
-                <div class="dropdown-content">
-                    <a href="chapter4/week3.html">문제해결과 실습</a>
-                    <a href="chapter4/week4.html">심화 실습</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="chapter6.html">조형 실습</a>
-                <div class="dropdown-content">
-                    <a href="chapter6/week2.html">온도 관리</a>
-                    <a href="chapter6/week3.html">가마 적재</a>
-                    <a href="chapter6/week4.html">최종 평가</a>
-                </div>
-            </li>
-        </ul>
+        <div class="nav-container">
+            <a href="index.html" class="logo">도예 수업</a>
+            
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="main-menu" id="mainMenu">
+                <li><a href="chapter1.html">제1장: 성형 단계</a></li>
+                <li><a href="chapter2.html">제2장: 정형 단계</a></li>
+                <li><a href="chapter3.html">제3장: 장식 단계</a></li>
+                <li><a href="chapter4.html">제4장: 초벌구이</a></li>
+                <li><a href="chapter5.html">제5장: 유약과 시유</a></li>
+                <li><a href="chapter6.html">제6장: 재벌구이</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <script>
+        function toggleMenu() {
+            const mainMenu = document.getElementById('mainMenu');
+            mainMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html> 
