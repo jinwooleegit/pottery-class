@@ -5,84 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도예 수업</title>
     <style>
-        /* 네비게이션 바 스타일 */
+        /* 전체 네비게이션 컨테이너 */
         .navbar {
-            background-color: #f8f9fa;
-            padding: 1rem;
+            background-color: #ffffff;
+            padding: 1rem 2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
-        /* 드롭다운 메뉴 스타일 */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 4px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* 링크 스타일 */
-        .navbar a {
-            color: #333;
-            text-decoration: none;
-            padding: 12px 16px;
-            display: block;
-        }
-
-        .navbar a:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* 메인 메뉴 스타일 */
+        /* 메인 메뉴 컨테이너 */
         .main-menu {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .main-menu > li {
-            display: inline-block;
+            position: relative;
+        }
+
+        /* 메인 메뉴 링크 스타일 */
+        .main-menu > li > a {
+            color: #333;
+            text-decoration: none;
+            padding: 1rem 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: block;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-menu > li > a:hover {
+            color: #c17c59;
+            border-bottom: 2px solid #c17c59;
+        }
+
+        /* 드롭다운 메뉴 스타일 */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+
+        /* 드롭다운 메뉴 항목 스타일 */
+        .dropdown-content a {
+            color: #666;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            display: block;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f9fa;
+            color: #c17c59;
+            padding-left: 2rem;
+        }
+
+        /* 로고 스타일 */
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #c17c59;
+            text-decoration: none;
+            padding: 1rem 0;
+        }
+
+        /* 반응형 디자인을 위한 미디어 쿼리 */
+        @media (max-width: 768px) {
+            .main-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .dropdown-content {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding-left: 1rem;
+            }
+
+            .navbar {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <ul class="main-menu">
-            <li><a href="index.html">홈</a></li>
+            <li><a href="index.html" class="logo">도예 수업</a></li>
             <li class="dropdown">
                 <a href="chapter2.html">2장. 도자기의 기초</a>
                 <div class="dropdown-content">
-                    <a href="chapter2/week2.html">2주차</a>
-                    <a href="chapter2/week3.html">3주차</a>
+                    <a href="chapter2/week2.html">2주차 - 굽 깎기와 다듬기</a>
+                    <a href="chapter2/week3.html">3주차 - 부속품 제작</a>
                 </div>
             </li>
             <li><a href="chapter3.html">3장. 물레 기초</a></li>
             <li class="dropdown">
                 <a href="chapter4.html">4장. 물레 성형</a>
                 <div class="dropdown-content">
-                    <a href="chapter4/week3.html">3주차</a>
-                    <a href="chapter4/week4.html">4주차</a>
+                    <a href="chapter4/week3.html">3주차 - 문제점과 해결</a>
+                    <a href="chapter4/week4.html">4주차 - 실습</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="chapter6.html">6장. 조형 실습</a>
                 <div class="dropdown-content">
-                    <a href="chapter6/week2.html">2주차</a>
-                    <a href="chapter6/week3.html">3주차</a>
-                    <a href="chapter6/week4.html">4주차</a>
+                    <a href="chapter6/week2.html">2주차 - 온도 관리</a>
+                    <a href="chapter6/week3.html">3주차 - 가마 적재</a>
+                    <a href="chapter6/week4.html">4주차 - 최종 평가</a>
                 </div>
             </li>
         </ul>
