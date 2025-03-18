@@ -7,8 +7,8 @@
     <style>
         /* 전체 네비게이션 컨테이너 */
         .navbar {
-            background-color: #ffffff;
-            padding: 1rem 2rem;
+            background-color: #8B4513;
+            padding: 0.8rem 2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: fixed;
             top: 0;
@@ -23,9 +23,9 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            gap: 2rem;
+            gap: 3rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -36,89 +36,94 @@
 
         /* 메인 메뉴 링크 스타일 */
         .main-menu > li > a {
-            color: #333;
+            color: #fff;
             text-decoration: none;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1rem;
             display: block;
-            transition: color 0.3s ease;
-            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
         }
 
         .main-menu > li > a:hover {
-            color: #c17c59;
-            border-bottom: 2px solid #c17c59;
+            color: #FFE4C4;
         }
 
         /* 드롭다운 메뉴 스타일 */
-        .dropdown {
-            position: relative;
-        }
-
         .dropdown-content {
             display: none;
             position: absolute;
             top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #ffffff;
-            min-width: 200px;
+            left: 0;
+            background-color: #fff;
+            min-width: 180px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            border-radius: 4px;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
-            opacity: 1;
         }
 
         /* 드롭다운 메뉴 항목 스타일 */
         .dropdown-content a {
             color: #666;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             display: block;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
         }
 
         .dropdown-content a:hover {
             background-color: #f8f9fa;
-            color: #c17c59;
-            padding-left: 2rem;
+            color: #8B4513;
         }
 
         /* 로고 스타일 */
         .logo {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #c17c59;
+            color: #FFE4C4 !important;
             text-decoration: none;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
+            margin-right: 2rem;
         }
 
         /* 반응형 디자인을 위한 미디어 쿼리 */
         @media (max-width: 768px) {
             .main-menu {
                 flex-direction: column;
-                gap: 1rem;
+                align-items: flex-start;
+                gap: 0.5rem;
             }
 
             .dropdown-content {
                 position: static;
-                transform: none;
                 box-shadow: none;
                 margin-top: 0;
                 padding-left: 1rem;
+                min-width: auto;
+                background-color: transparent;
             }
 
             .navbar {
                 padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .main-menu > li > a {
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-content a {
+                color: #FFE4C4;
+                padding: 0.4rem 1rem;
             }
         }
     </style>
@@ -128,26 +133,26 @@
         <ul class="main-menu">
             <li><a href="index.html" class="logo">도예 수업</a></li>
             <li class="dropdown">
-                <a href="chapter2.html">2장. 도자기의 기초</a>
+                <a href="chapter2.html">도자기의 기초</a>
                 <div class="dropdown-content">
-                    <a href="chapter2/week2.html">2주차 - 굽 깎기와 다듬기</a>
-                    <a href="chapter2/week3.html">3주차 - 부속품 제작</a>
+                    <a href="chapter2/week2.html">굽 깎기와 다듬기</a>
+                    <a href="chapter2/week3.html">부속품 제작</a>
                 </div>
             </li>
-            <li><a href="chapter3.html">3장. 물레 기초</a></li>
+            <li><a href="chapter3.html">물레 기초</a></li>
             <li class="dropdown">
-                <a href="chapter4.html">4장. 물레 성형</a>
+                <a href="chapter4.html">물레 성형</a>
                 <div class="dropdown-content">
-                    <a href="chapter4/week3.html">3주차 - 문제점과 해결</a>
-                    <a href="chapter4/week4.html">4주차 - 실습</a>
+                    <a href="chapter4/week3.html">문제해결과 실습</a>
+                    <a href="chapter4/week4.html">심화 실습</a>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="chapter6.html">6장. 조형 실습</a>
+                <a href="chapter6.html">조형 실습</a>
                 <div class="dropdown-content">
-                    <a href="chapter6/week2.html">2주차 - 온도 관리</a>
-                    <a href="chapter6/week3.html">3주차 - 가마 적재</a>
-                    <a href="chapter6/week4.html">4주차 - 최종 평가</a>
+                    <a href="chapter6/week2.html">온도 관리</a>
+                    <a href="chapter6/week3.html">가마 적재</a>
+                    <a href="chapter6/week4.html">최종 평가</a>
                 </div>
             </li>
         </ul>
