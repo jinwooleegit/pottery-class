@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{WEEK_DESCRIPTION}">
+    <meta name="author" content="도예 교육과정">
+    <meta name="theme-color" content="#1e88e5">
+    <title>{CHAPTER_TITLE} {WEEK_NUMBER}주차: {WEEK_TITLE} - 도예 교육과정</title>
+    
+    <!-- 폰트 최적화 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+    
+    <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Open Graph 태그 -->
+    <meta property="og:title" content="{CHAPTER_TITLE} {WEEK_NUMBER}주차: {WEEK_TITLE} - 도예 교육과정">
+    <meta property="og:description" content="{WEEK_DESCRIPTION}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../og-image.jpg">
+</head>
+<body>
+    <!-- 메인 네비게이션 바 -->
+    <!-- 기존 메뉴 제거됨 -->
+
+    <div class="container fade-in">
+        <header class="week-header">
+            <h1>{CHAPTER_TITLE} {WEEK_NUMBER}주차</h1>
+            <h2>{WEEK_TITLE}</h2>
+        </header>
+
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="../{CHAPTER_LINK}.html">{CHAPTER_TITLE}</a></li>
+                <li>{WEEK_NUMBER}주차: {WEEK_TITLE}</li>
+            </ul>
+        </nav>
+        
+        <section class="lecture-plan">
+            <h2>강의계획서</h2>
+            <div class="plan-content">
+                <h3>학습목표</h3>
+                <ul>
+                    <li>{LEARNING_OBJECTIVE_1}</li>
+                    <li>{LEARNING_OBJECTIVE_2}</li>
+                    <li>{LEARNING_OBJECTIVE_3}</li>
+                </ul>
+                
+                <h3>준비물</h3>
+                <ul>
+                    <li>{MATERIAL_1}</li>
+                    <li>{MATERIAL_2}</li>
+                    <li>{MATERIAL_3}</li>
+                    <li>{MATERIAL_4}</li>
+                    <li>{MATERIAL_5}</li>
+                </ul>
+                
+                <h3>강의 내용</h3>
+                <ol>
+                    <li>{LECTURE_CONTENT_1} ({TIME_1})</li>
+                    <li>{LECTURE_CONTENT_2} ({TIME_2})</li>
+                    <li>{LECTURE_CONTENT_3} ({TIME_3})</li>
+                    <li>휴식 ({BREAK_TIME})</li>
+                    <li>{LECTURE_CONTENT_4} ({TIME_4})</li>
+                    <li>{LECTURE_CONTENT_5} ({TIME_5})</li>
+                    <li>질의응답 및 다음 차시 안내 ({CLOSING_TIME})</li>
+                </ol>
+                
+                <h3>평가 포인트</h3>
+                <ul>
+                    <li>{EVALUATION_POINT_1}</li>
+                    <li>{EVALUATION_POINT_2}</li>
+                    <li>{EVALUATION_POINT_3}</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="lecture-script">
+            <h2>강의스크립트</h2>
+            <div class="script-content">
+                {LECTURE_SCRIPT}
+            </div>
+        </section>
+        
+        <nav class="chapter-navigation">
+            <a href="{PREV_LINK}" class="nav-link prev" aria-label="이전 주차로 이동하기">이전 주차: {PREV_TITLE}</a>
+            <a href="../{CHAPTER_LINK}.html" class="nav-link home" aria-label="장 메인으로 이동하기">장 메인으로</a>
+            <a href="{NEXT_LINK}" class="nav-link next" aria-label="다음 주차로 이동하기">다음 주차: {NEXT_TITLE}</a>
+        </nav>
+
+        <footer>
+            <p>&copy; 2023 도예 교육과정. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- 자바스크립트 -->
+    
+
+    <!-- 전역 메뉴 스크립트 -->
+    <script src="global-menu.js"></script>
+</body>
+</html> 

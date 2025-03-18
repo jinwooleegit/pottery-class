@@ -1,13 +1,20 @@
 /* 기본 스타일 */
 :root {
-    --primary-color: #8B4513;
-    --secondary-color: #D2691E;
-    --background-color: #FFF8F0;
-    --text-color: #333333;
-    --light-text: #FFFFFF;
-    --card-background: #FFFFFF;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --border-color: #E0E0E0;
+    /* 새로운 색상 체계 - 흙색 계열에서 벗어나 가독성 높은 팔레트로 변경 */
+    --primary-color: #1e88e5;       /* 파란색 계열로 변경 */
+    --secondary-color: #42a5f5;     /* 밝은 파란색 */
+    --accent-color: #ff9800;        /* 강조 색상으로 오렌지 */
+    --text-color: #333333;          /* 어두운 텍스트 */
+    --light-text: #FFFFFF;          /* 흰색 텍스트 */
+    --background-color: #f5f5f5;    /* 밝은 배경색 */
+    --card-background: #FFFFFF;     /* 카드 배경 */
+    --shadow: 0 3px 6px rgba(0, 0, 0, 0.1);  /* 그림자 효과 강화 */
+    --border-color: #e0e0e0;        /* 경계선 색상 */
+    --header-background: linear-gradient(135deg, #1e88e5, #1565c0); /* 그라데이션 헤더 */
+    --menu-hover: #e3f2fd;          /* 메뉴 호버 색상 */
+    --success-color: #4caf50;       /* 성공 메시지 색상 */
+    --warning-color: #ff9800;       /* 경고 메시지 색상 */
+    --error-color: #f44336;         /* 오류 메시지 색상 */
 }
 
 * {
@@ -17,10 +24,13 @@
 }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    word-break: keep-all;
 }
 
 .container {
@@ -29,30 +39,126 @@ body {
     padding: 20px;
 }
 
+/* 웹폰트 및 타이포그래피 최적화 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.8em;
+    color: var(--text-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* 상단 네비게이션 바 */
+.top-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--light-text);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    padding: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover {
+    color: var(--secondary-color);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 10px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    background-color: var(--menu-hover);
+    color: var(--primary-color);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
 /* 헤더 스타일 */
-header {
-    text-align: center;
-    padding: 40px 0;
-    background-color: var(--primary-color);
+header.main-header {
+    background: var(--header-background);
     color: var(--light-text);
+    padding: 60px 20px;
+    text-align: center;
     margin-bottom: 40px;
     border-radius: 8px;
+    box-shadow: var(--shadow);
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
 }
 
 .subtitle {
-    font-size: 1.2em;
+    font-size: 1.3em;
     opacity: 0.9;
+    font-weight: 400;
 }
 
 /* 섹션 스타일 */
 section {
     margin-bottom: 40px;
-    padding: 20px;
+    padding: 30px;
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -60,50 +166,69 @@ section {
 
 section h2 {
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.8em;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.03em;
 }
 
 /* 챕터 스타일 */
 .chapters {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
 }
 
-.chapter {
+.chapter-card {
     background-color: var(--card-background);
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
-.chapter:hover {
+.chapter-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.chapter h3 {
+.chapter-card h3 {
     color: var(--primary-color);
     margin-bottom: 15px;
     font-size: 1.4em;
 }
 
-.chapter p {
+.chapter-desc {
     margin-bottom: 15px;
-    color: var(--text-color);
+    line-height: 1.6;
 }
 
-.chapter ul {
-    list-style-position: inside;
-    margin-bottom: 20px;
+.chapter-weeks {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
 }
 
-.chapter ul li {
-    margin-bottom: 8px;
+.chapter-weeks li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chapter-weeks li:last-child {
+    border-bottom: none;
+}
+
+.chapter-weeks a {
     color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: block;
+}
+
+.chapter-weeks a:hover {
+    color: var(--primary-color);
 }
 
 .chapter-link {
@@ -114,6 +239,8 @@ section h2 {
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    font-weight: 500;
+    margin-top: 10px;
 }
 
 .chapter-link:hover {
@@ -122,35 +249,22 @@ section h2 {
 
 /* 학습 안내 스타일 */
 .course-info ul {
-    list-style-position: inside;
-    margin-left: 20px;
+    list-style-type: none;
+    margin: 0 0 20px 0;
 }
 
 .course-info li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    header {
-        padding: 20px 0;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    .chapters {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 15px;
-    }
+.course-info li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* 챕터 페이지 스타일 */
@@ -164,32 +278,51 @@ section h2 {
     box-shadow: var(--shadow);
 }
 
-.weekly-contents {
-    margin-top: 40px;
+.key-points {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
 }
 
-.week {
+.key-points h3 {
+    font-size: 1.3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.key-points ul {
+    padding-left: 20px;
+}
+
+.key-points li {
+    margin-bottom: 8px;
+}
+
+.weeks h3 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.6em;
+}
+
+.week-card {
     background-color: var(--card-background);
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
-.week:hover {
+.week-card:hover {
     transform: translateY(-3px);
 }
 
-.week h3 {
+.week-card h4 {
     color: var(--primary-color);
     margin-bottom: 15px;
     font-size: 1.3em;
-}
-
-.week p {
-    margin-bottom: 20px;
-    color: var(--text-color);
 }
 
 .week-link {
@@ -200,122 +333,37 @@ section h2 {
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-weight: 500;
 }
 
 .week-link:hover {
     background-color: var(--secondary-color);
 }
 
+/* 내비게이션 스타일 */
 .chapter-navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
     padding: 20px 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-color);
 }
 
 .nav-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 10px 20px;
     background-color: var(--primary-color);
     color: var(--light-text);
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-link:hover {
     background-color: var(--secondary-color);
-}
-
-/* 챕터 목록 링크 스타일 */
-.chapter ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.chapter ul li a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-/* 주차별 페이지 스타일 */
-.week-header {
-    text-align: left;
-    padding: 30px;
-}
-
-.week-header h1 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.week-header h2 {
-    font-size: 1.5em;
-    color: var(--light-text);
-    border: none;
-    opacity: 0.9;
-}
-
-.lecture-plan .plan-content {
-    padding: 20px;
-}
-
-.plan-content h3 {
-    color: var(--primary-color);
-    margin: 20px 0 10px;
-    font-size: 1.3em;
-}
-
-.plan-content ul, .plan-content ol {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-.plan-content li {
-    margin-bottom: 8px;
-}
-
-.plan-content ul ul, .plan-content ol ul {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.lecture-script .script-content {
-    padding: 20px;
-    background-color: #FAFAFA;
-    border-radius: 4px;
-}
-
-.script-content p {
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-.week-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: var(--card-background);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.nav-link {
-    display: inline-block;
-    padding: 10px 20px;
-    color: var(--primary-color);
-    text-decoration: none;
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    background-color: var(--primary-color);
-    color: var(--light-text);
 }
 
 .nav-link.prev::before {
@@ -326,4 +374,378 @@ section h2 {
 .nav-link.next::after {
     content: "→";
     margin-left: 8px;
+}
+
+.nav-link.home {
+    background-color: var(--text-color);
+}
+
+.nav-link.home:hover {
+    background-color: #555;
+}
+
+/* 주차별 페이지 스타일 */
+.week-header {
+    background: var(--header-background);
+    color: var(--light-text);
+    padding: 40px 30px;
+    border-radius: 8px;
+}
+
+.week-header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.week-header h2 {
+    font-size: 1.5em;
+    border-bottom: none;
+    color: var(--light-text);
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.lecture-plan {
+    margin-bottom: 30px;
+}
+
+.plan-content {
+    padding: 25px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.plan-content h3 {
+    color: var(--primary-color);
+    margin: 25px 0 15px 0;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.plan-content h3:first-child {
+    margin-top: 0;
+}
+
+.plan-content ul, 
+.plan-content ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.plan-content li {
+    margin-bottom: 10px;
+}
+
+.lecture-script {
+    margin-top: 40px;
+}
+
+.script-content {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.script-content p {
+    line-height: 1.8;
+    margin-bottom: 1.2em;
+}
+
+/* 빵 부스러기 네비게이션 */
+.breadcrumb {
+    background-color: transparent;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb li {
+    display: inline;
+    position: relative;
+}
+
+.breadcrumb li:after {
+    content: "›";
+    margin: 0 8px;
+    color: #999;
+}
+
+.breadcrumb li:last-child:after {
+    content: "";
+    margin: 0;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 접근성 포커스 스타일 */
+a:focus, button:focus {
+    outline: 3px solid rgba(30, 136, 229, 0.3);
+    outline-offset: 2px;
+}
+
+/* 다크 모드 토글 버튼 */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dark-mode-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode-toggle span {
+    font-size: 1.2rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header.main-header {
+        padding: 40px 20px;
+    }
+    
+    section {
+        padding: 25px;
+    }
+    
+    .chapters {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header.main-header {
+        padding: 30px 15px;
+        margin-bottom: 30px;
+    }
+    
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    .subtitle {
+        font-size: 1.1em;
+    }
+    
+    .chapters {
+        gap: 20px;
+    }
+    
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .chapter-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .chapter-navigation .nav-link {
+        text-align: center;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--light-text);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+    .chapter-card h3 {
+        font-size: 1.2em;
+    }
+    
+    .week-card h4 {
+        font-size: 1.1em;
+    }
+    
+    .plan-content h3 {
+        font-size: 1.2em;
+    }
+    
+    .script-content {
+        padding: 20px;
+    }
+}
+
+/* 다크 모드 스타일 */
+.dark-mode {
+    --primary-color: #90caf9;
+    --secondary-color: #64b5f6;
+    --accent-color: #ffb74d;
+    --text-color: #e0e0e0;
+    --light-text: #FFFFFF;
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    --border-color: #333333;
+    --header-background: linear-gradient(135deg, #0d47a1, #1565c0);
+    --menu-hover: rgba(144, 202, 249, 0.1);
+}
+
+.dark-mode .chapter-card,
+.dark-mode .week-card,
+.dark-mode .chapter-weeks li {
+    border-color: #333;
+}
+
+.dark-mode .key-points {
+    background-color: #242424;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #aaa;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.dark-mode tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #777;
 } 

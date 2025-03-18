@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 헤더 파일 포함 -->
+    <!-- #include file="../header.html" -->
+    <meta name="description" content="도예 교육과정의 제1장 1주차 강의에서는 흙의 종류와 특성, 기본 도구 사용법에 대해 학습합니다.">
     <title>제1장 1주차 - 흙의 종류와 특성 이해, 기본 도구 사용법</title>
     <link rel="stylesheet" href="../styles.css">
+    <!-- Open Graph 태그 추가 -->
+    <meta property="og:title" content="제1장 1주차 - 흙의 종류와 특성 이해, 기본 도구 사용법">
+    <meta property="og:description" content="도예 교육과정의 제1장 1주차 강의에서는 흙의 종류와 특성, 기본 도구 사용법에 대해 학습합니다.">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <div class="container">
+        <!-- 메뉴 파일 포함 -->
+        <!-- #include file="../menu.html" -->
+        
         <header class="week-header">
             <h1>제1장: 성형 단계</h1>
             <h2>1주차: 흙의 종류와 특성 이해, 기본 도구 사용법</h2>
         </header>
+
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="../chapter1.html">제1장: 성형 단계</a></li>
+                <li>1주차: 흙의 종류와 특성 이해, 기본 도구 사용법</li>
+            </ul>
+        </nav>
 
         <section class="lecture-plan">
             <h2>강의계획서</h2>
@@ -85,9 +101,15 @@
         </section>
 
         <nav class="week-navigation">
-            <a href="../chapter1.html" class="nav-link prev">← 목차로 돌아가기</a>
-            <a href="week2.html" class="nav-link next">다음 주차: 손성형 기법 실습 →</a>
+            <a href="../chapter1.html" class="nav-link prev" aria-label="목차로 돌아가기">← 목차로 돌아가기</a>
+            <a href="week2.html" class="nav-link next" aria-label="다음 주차로 이동">다음 주차: 손성형 기법 실습 →</a>
         </nav>
+        
+        <!-- 푸터 파일 포함 -->
+        <!-- #include file="../footer.html" -->
     </div>
+
+    <!-- 전역 메뉴 스크립트 -->
+    <script src="global-menu.js"></script>
 </body>
 </html> 
