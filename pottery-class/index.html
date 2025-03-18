@@ -21,114 +21,195 @@
     <meta property="og:title" content="도예 교육과정">
     <meta property="og:description" content="전통과 현대를 아우르는 체계적인 도예 교육과정입니다. 성형부터 시유까지 모든 과정을 단계별로 학습할 수 있습니다.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:image" content="images/og-image.jpg">
+    
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "도예 교육과정",
+      "description": "전통과 현대를 아우르는 체계적인 도예 교육과정입니다. 성형부터 시유까지 모든 과정을 단계별로 학습할 수 있습니다.",
+      "provider": {
+        "@type": "Organization",
+        "name": "도예 아카데미"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- 스킵 네비게이션 -->
+    <a href="#main-content" class="skip-link">본문으로 바로가기</a>
+    
     <div class="container fade-in">
         <header class="main-header">
+            <!-- 배너 이미지 추가 -->
+            <div class="header-banner">
+                <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 도예가가 물레에서 도자기를 만드는 과정을 보여주는 파란색 톤의 단순하고 현대적인 스타일의 배너 이미지" -->
+                <img src="images/header-banner.jpg" alt="도예가가 물레에서 도자기를 만드는 모습" class="banner-image">
+            </div>
             <h1>도예 교육과정</h1>
             <p class="subtitle">전통과 현대를 아우르는 체계적인 도예 교육</p>
         </header>
 
-        <section class="course-intro">
-            <h2>과정 소개</h2>
-            <p>본 교육과정은 도예를 처음 접하는 분들부터 전문가가 되고자 하는 분들까지 체계적으로 학습할 수 있도록 구성되었습니다. 
-            전통 도예의 기본을 바탕으로 현대적 기법까지 아우르는 종합적인 커리큘럼을 제공합니다.</p>
-        </section>
-
-        <section class="course-structure">
-            <h2>교육과정 구성</h2>
-            <div class="chapters">
-                <div class="chapter-card">
-                    <h3>제1장: 성형 단계</h3>
-                    <p class="chapter-desc">흙의 특성 이해부터 시작하여 손성형과 물레성형의 기본을 학습합니다.</p>
-                    <ul class="chapter-weeks">
-                        <li><a href="chapter1/week1.html">1주차: 흙의 종류와 특성 이해, 기본 도구 사용법</a></li>
-                        <li><a href="chapter1/week2.html">2주차: 손성형 기법(핀칭, 코일링) 실습</a></li>
-                        <li><a href="chapter1/week3.html">3주차: 물레 기본 작동법 및 중심잡기</a></li>
-                        <li><a href="chapter1/week4.html">4주차: 물레 성형 - 기본 형태 만들기</a></li>
-                    </ul>
-                    <a href="chapter1.html" class="chapter-link" aria-label="제1장 전체 보기">장 전체 보기</a>
+        <main id="main-content">
+            <section class="course-intro">
+                <h2>과정 소개</h2>
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <p>본 교육과정은 도예를 처음 접하는 분들부터 전문가가 되고자 하는 분들까지 체계적으로 학습할 수 있도록 구성되었습니다. 
+                        전통 도예의 기본을 바탕으로 현대적 기법까지 아우르는 종합적인 커리큘럼을 제공합니다.</p>
+                    </div>
+                    <div class="intro-image">
+                        <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 도예 공방의 다양한 도구들과 재료들을 보여주는 깔끔하고 정돈된 이미지" -->
+                        <img src="images/pottery-tools.jpg" alt="도예에 사용되는 다양한 도구와 재료들" class="responsive-img">
+                    </div>
                 </div>
+            </section>
 
-                <div class="chapter-card">
-                    <h3>제2장: 정형 단계</h3>
-                    <p class="chapter-desc">성형된 기물의 형태를 정교하게 다듬고 완성하는 기술을 배웁니다.</p>
-                    <ul class="chapter-weeks">
-                        <li><a href="chapter2/week1.html">1주차: 정형 도구 소개 및 사용법</a></li>
-                        <li><a href="chapter2/week2.html">2주차: 굽 깎기와 다듬기 기법</a></li>
-                        <li><a href="chapter2/week3.html">3주차: 세부 장식 기법과 문양 표현</a></li>
-                        <li><a href="chapter2/week4.html">4주차: 손잡이, 주둥이 등 부속품 제작 및 부착</a></li>
-                    </ul>
-                    <a href="chapter2.html" class="chapter-link" aria-label="제2장 전체 보기">장 전체 보기</a>
+            <section class="course-structure">
+                <h2>교육과정 구성</h2>
+                <div class="chapters">
+                    <div class="chapter-card">
+                        <div class="chapter-image">
+                            <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 손으로 도자기를 성형하는 모습과 물레를 사용하는 모습을 보여주는 단순한 선화 스타일의 이미지" -->
+                            <img src="images/chapter1-forming.jpg" alt="흙 성형 과정 일러스트레이션" class="responsive-img">
+                        </div>
+                        <h3>제1장: 성형 단계</h3>
+                        <p class="chapter-desc">흙의 특성 이해부터 시작하여 손성형과 물레성형의 기본을 학습합니다.</p>
+                        <ul class="chapter-weeks">
+                            <li><a href="chapter1/week1.html">1주차: 흙의 종류와 특성 이해, 기본 도구 사용법</a></li>
+                            <li><a href="chapter1/week2.html">2주차: 손성형 기법(핀칭, 코일링) 실습</a></li>
+                            <li><a href="chapter1/week3.html">3주차: 물레 기본 작동법 및 중심잡기</a></li>
+                            <li><a href="chapter1/week4.html">4주차: 물레 성형 - 기본 형태 만들기</a></li>
+                        </ul>
+                        <a href="chapter1.html" class="chapter-link" aria-label="제1장 성형 단계 전체 보기">장 전체 보기</a>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-image">
+                            <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 도자기의 굽을 깎고 다듬는 정형 과정을 보여주는 파란색 계열의 선명한 이미지" -->
+                            <img src="images/chapter2-trimming.jpg" alt="정형 과정 일러스트레이션" class="responsive-img">
+                        </div>
+                        <h3>제2장: 정형 단계</h3>
+                        <p class="chapter-desc">성형된 기물의 형태를 정교하게 다듬고 완성하는 기술을 배웁니다.</p>
+                        <ul class="chapter-weeks">
+                            <li><a href="chapter2/week1.html">1주차: 정형 도구 소개 및 사용법</a></li>
+                            <li><a href="chapter2/week2.html">2주차: 굽 깎기와 다듬기 기법</a></li>
+                            <li><a href="chapter2/week3.html">3주차: 세부 장식 기법과 문양 표현</a></li>
+                            <li><a href="chapter2/week4.html">4주차: 손잡이, 주둥이 등 부속품 제작 및 부착</a></li>
+                        </ul>
+                        <a href="chapter2.html" class="chapter-link" aria-label="제2장 정형 단계 전체 보기">장 전체 보기</a>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-image">
+                            <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 도자기에 장식과 문양을 새기는 과정을 보여주는 세부적인 이미지" -->
+                            <img src="images/chapter3-decoration.jpg" alt="장식 과정 일러스트레이션" class="responsive-img">
+                        </div>
+                        <h3>제3장: 장식 단계</h3>
+                        <p class="chapter-desc">작품의 미적 가치를 높이는 다양한 장식 기법을 배웁니다.</p>
+                        <ul class="chapter-weeks">
+                            <li><a href="chapter3/week1.html">1주차: 장식 도구와 재료 소개</a></li>
+                            <li><a href="chapter3/week2.html">2주차: 조각과 양각 기법</a></li>
+                            <li><a href="chapter3/week3.html">3주차: 색화장토와 안료 사용법</a></li>
+                            <li><a href="chapter3/week4.html">4주차: 전사지와 문양 표현</a></li>
+                        </ul>
+                        <a href="chapter3.html" class="chapter-link" aria-label="제3장 장식 단계 전체 보기">장 전체 보기</a>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-image">
+                            <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 도자기가 가마에서 초벌구이 되는 과정을 단면도로 보여주는 열의 효과가 있는 이미지" -->
+                            <img src="images/chapter4-bisque.jpg" alt="초벌구이 과정 일러스트레이션" class="responsive-img">
+                        </div>
+                        <h3>제4장: 초벌 단계</h3>
+                        <p class="chapter-desc">작품의 안전한 건조 방법과 첫 번째 소성 과정인 초벌구이에 대해 배웁니다.</p>
+                        <ul class="chapter-weeks">
+                            <li><a href="chapter4/week1.html">1주차: 도자기 건조 과정과 방법</a></li>
+                            <li><a href="chapter4/week2.html">2주차: 건조 과정에서 발생하는 문제점과 해결책</a></li>
+                            <li><a href="chapter4/week3.html">3주차: 가마의 종류와 초벌구이 원리</a></li>
+                            <li><a href="chapter4/week4.html">4주차: 초벌구이 온도 설정과 가마 적재 방법</a></li>
+                        </ul>
+                        <a href="chapter4.html" class="chapter-link" aria-label="제4장 초벌 단계 전체 보기">장 전체 보기</a>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-image">
+                            <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 도자기에 유약을 시유하는 다양한 방법들을 보여주는 여러 기법이 나란히 있는 이미지" -->
+                            <img src="images/chapter5-glazing.jpg" alt="시유 과정 일러스트레이션" class="responsive-img">
+                        </div>
+                        <h3>제5장: 유약과 시유</h3>
+                        <p class="chapter-desc">도자기의 완성도를 높이는 유약에 대해 배우고, 다양한 시유 기법을 실습합니다.</p>
+                        <ul class="chapter-weeks">
+                            <li><a href="chapter5/week1.html">1주차: 유약의 이해와 기본 원리</a></li>
+                            <li><a href="chapter5/week2.html">2주차: 시유 도구와 기본 기법</a></li>
+                            <li><a href="chapter5/week3.html">3주차: 응용 시유 기법</a></li>
+                            <li><a href="chapter5/week4.html">4주차: 유약 실험과 창의적 표현</a></li>
+                        </ul>
+                        <a href="chapter5.html" class="chapter-link" aria-label="제5장 유약과 시유 단계 전체 보기">장 전체 보기</a>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-image">
+                            <!-- 이미지 생성 프롬프트: "교육적 일러스트레이션: 완성된 다양한 도자기 작품들이 전시되어 있는 모습과 작품을 평가하는 과정을 보여주는 이미지" -->
+                            <img src="images/chapter6-completion.jpg" alt="작품 완성 및 평가 과정 일러스트레이션" class="responsive-img">
+                        </div>
+                        <h3>제6장: 작품 완성과 평가</h3>
+                        <p class="chapter-desc">소성이 완료된 작품의 최종 마무리와 포트폴리오 구성, 작품 평가 방법을 학습합니다.</p>
+                        <ul class="chapter-weeks">
+                            <li><a href="chapter6/week1.html">1주차: 작품 최종 마무리</a></li>
+                            <li><a href="chapter6/week2.html">2주차: 작품 촬영과 포트폴리오</a></li>
+                            <li><a href="chapter6/week3.html">3주차: 전시 기획과 진행</a></li>
+                            <li><a href="chapter6/week4.html">4주차: 작품 평가와 발전 방향</a></li>
+                        </ul>
+                        <a href="chapter6.html" class="chapter-link" aria-label="제6장 작품 완성과 평가 단계 전체 보기">장 전체 보기</a>
+                    </div>
                 </div>
+            </section>
 
-                <div class="chapter-card">
-                    <h3>제3장: 장식 단계</h3>
-                    <p class="chapter-desc">작품의 미적 가치를 높이는 다양한 장식 기법을 배웁니다.</p>
-                    <ul class="chapter-weeks">
-                        <li><a href="chapter3/week1.html">1주차: 장식 도구와 재료 소개</a></li>
-                        <li><a href="chapter3/week2.html">2주차: 조각과 양각 기법</a></li>
-                        <li><a href="chapter3/week3.html">3주차: 색화장토와 안료 사용법</a></li>
-                        <li><a href="chapter3/week4.html">4주차: 전사지와 문양 표현</a></li>
-                    </ul>
-                    <a href="chapter3.html" class="chapter-link" aria-label="제3장 전체 보기">장 전체 보기</a>
+            <section class="course-info">
+                <h2>학습 안내</h2>
+                <ul>
+                    <li><strong>수업 구성:</strong> 각 장은 4주차로 구성되어 있습니다.</li>
+                    <li><strong>수업 방식:</strong> 매 차시 이론과 실습이 함께 진행됩니다.</li>
+                    <li><strong>준비물:</strong> 실습 시 필요한 재료와 도구는 미리 준비해주세요.</li>
+                    <li><strong>안전 유의사항:</strong> 안전을 위해 보호장비 착용은 필수입니다.</li>
+                </ul>
+                <div class="quick-links">
+                    <h3>빠른 링크</h3>
+                    <div class="links-container">
+                        <a href="pottery-terms.html" class="quick-link" aria-label="도예 용어집으로 이동">도예 용어집</a>
+                        <a href="#search-section" class="quick-link" aria-label="검색 기능으로 이동">검색</a>
+                        <a href="sitemap.xml" class="quick-link" aria-label="사이트맵으로 이동">사이트맵</a>
+                    </div>
                 </div>
+            </section>
 
-                <div class="chapter-card">
-                    <h3>제4장: 초벌 단계</h3>
-                    <p class="chapter-desc">작품의 안전한 건조 방법과 첫 번째 소성 과정인 초벌구이에 대해 배웁니다.</p>
-                    <ul class="chapter-weeks">
-                        <li><a href="chapter4/week1.html">1주차: 도자기 건조 과정과 방법</a></li>
-                        <li><a href="chapter4/week2.html">2주차: 건조 과정에서 발생하는 문제점과 해결책</a></li>
-                        <li><a href="chapter4/week3.html">3주차: 가마의 종류와 초벌구이 원리</a></li>
-                        <li><a href="chapter4/week4.html">4주차: 초벌구이 온도 설정과 가마 적재 방법</a></li>
-                    </ul>
-                    <a href="chapter4.html" class="chapter-link" aria-label="제4장 전체 보기">장 전체 보기</a>
+            <!-- 검색 섹션 추가 -->
+            <section id="search-section" class="search-section">
+                <h2>콘텐츠 검색</h2>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="검색어를 입력하세요..." aria-label="검색어 입력">
+                    <button id="search-button" aria-label="검색">검색</button>
                 </div>
-
-                <div class="chapter-card">
-                    <h3>제5장: 유약과 시유</h3>
-                    <p class="chapter-desc">도자기의 완성도를 높이는 유약에 대해 배우고, 다양한 시유 기법을 실습합니다.</p>
-                    <ul class="chapter-weeks">
-                        <li><a href="chapter5/week1.html">1주차: 유약의 이해와 기본 원리</a></li>
-                        <li><a href="chapter5/week2.html">2주차: 시유 도구와 기본 기법</a></li>
-                        <li><a href="chapter5/week3.html">3주차: 응용 시유 기법</a></li>
-                        <li><a href="chapter5/week4.html">4주차: 유약 실험과 창의적 표현</a></li>
-                    </ul>
-                    <a href="chapter5.html" class="chapter-link" aria-label="제5장 전체 보기">장 전체 보기</a>
-                </div>
-
-                <div class="chapter-card">
-                    <h3>제6장: 작품 완성과 평가</h3>
-                    <p class="chapter-desc">소성이 완료된 작품의 최종 마무리와 포트폴리오 구성, 작품 평가 방법을 학습합니다.</p>
-                    <ul class="chapter-weeks">
-                        <li><a href="chapter6/week1.html">1주차: 작품 최종 마무리</a></li>
-                        <li><a href="chapter6/week2.html">2주차: 작품 촬영과 포트폴리오</a></li>
-                        <li><a href="chapter6/week3.html">3주차: 전시 기획과 진행</a></li>
-                        <li><a href="chapter6/week4.html">4주차: 작품 평가와 발전 방향</a></li>
-                    </ul>
-                    <a href="chapter6.html" class="chapter-link" aria-label="제6장 전체 보기">장 전체 보기</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="course-info">
-            <h2>학습 안내</h2>
-            <ul>
-                <li>각 장은 4주차로 구성되어 있습니다.</li>
-                <li>매 차시 이론과 실습이 함께 진행됩니다.</li>
-                <li>실습 시 필요한 재료와 도구는 미리 준비해주세요.</li>
-                <li>안전을 위해 보호장비 착용은 필수입니다.</li>
-            </ul>
-        </section>
+                <div id="search-results" class="search-results" aria-live="polite"></div>
+            </section>
+        </main>
 
         <footer>
-            <p>&copy; 2023 도예 교육과정. All rights reserved.</p>
+            <p>&copy; 2025 도예 교육과정. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="sitemap.xml" aria-label="사이트맵">사이트맵</a> |
+                <a href="pottery-terms.html" aria-label="도예 용어집">도예 용어집</a>
+            </div>
         </footer>
     </div>
 
     <!-- 전역 메뉴 스크립트 -->
     <script src="global-menu.js"></script>
+    
+    <!-- 검색 기능 스크립트 -->
+    <script src="js/search.js"></script>
 </body>
 </html> 
